@@ -60,4 +60,26 @@ request.onupgradeneeded = function (event) {
                 });
             }
           }
+    }
+    
+    request.onsuccess = function (event) {
+        console.log('success');
+        b = event.target.result;
+          
+        if (navigator.onLine) {
+        console.log('Back online!');
+        checkDB();
         }
+    };
+          
+    const saveRecord = (record) => {
+        console.log('Record saved');
+          
+    const transaction = db.transaction(['BudgetStore'], 'readwrite');
+          
+    const store = transaction.objectStore('BudgetStore');
+          
+        store.add(record);
+    };
+          
+    window.addEventListener('online', checkDB);
