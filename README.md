@@ -8,7 +8,7 @@
   
   Click the link below to visit my deployed page.
 
-  <!-- [URL](undefined) -->
+[Budget Tracker Application](https://floating-river-46763.herokuapp.com)
 
   ## Table of Contents
   
@@ -34,7 +34,9 @@
 
   ## Installation
   
-  npm i  
+   To install run the command npm i  
+
+   Then run the command npm start
 
   ## Test
 
@@ -46,7 +48,11 @@
 
   ## Visualization
 
-  placeholder to add images or other media
+  Image of Deployed page
+  ![deployed page](./assets/images/deployed%20page.png)
+
+  Adding to Atlas
+  ![database image](assets/images/connection%20to%20Atlas.png)
 
   ## Acknowledgements
 
