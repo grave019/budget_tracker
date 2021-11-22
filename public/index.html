@@ -41,8 +41,17 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-  <script src="./db.js"></script>
-  <script src="./index.js"></script>
-
+  <script src="db.js"></script>
+  <script src="index.js"></script>
+  <script type="text/javascript">
+    (function () {
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("./service-worker.js", { scope: "/" })
+          .then(() => console.log("Service Worker has shown up for work."))
+          .catch((error) => console.log("Service Worker out sick:", error));
+      }
+    })();
+  </script>
 </body>
 </html>
